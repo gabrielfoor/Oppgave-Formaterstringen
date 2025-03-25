@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Formater stringen</h1>
-    <input type="text" name="" id="input" >
-    <button  onclick="formatString()">Formater</button>
-
+    <input type="text" name="" id="input">
+    <button onclick="formatString()">Formater</button>
+    <div id="output"></div>
 
 
     <script>
         let unformatedString;
         let formatedString;
-        
+        let capitalLetter;
+        let index = 0;
 
-
-        function formatString(){
+        function formatString() {
             unformatedString = document.getElementById('input').value
-            
-
+            capitalLetter = unformatedString.charAt(index).toUpperCase()
+            formatedString = capitalLetter + unformatedString.slice(1)
+            document.getElementById('output').innerText = formatedString;
 
         }
-
     </script>
 
 </body>
+
 </html>
